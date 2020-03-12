@@ -2,7 +2,7 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "URL Shortener",
-  "main": "app/bin/start.js",
+  "main": "bin/start.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/denis-onder/url-shortener#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",

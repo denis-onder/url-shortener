@@ -1,10 +1,12 @@
 const express = require("express");
+const middleware = require("./middleware");
 const { port, env } = require("./config");
 
 class Server {
   constructor() {
     this.app = express();
     // Execute functions responsible for setting the server up here
+    middleware(this.app);
   }
   _serverStartHandler(err) {
     if (err) {
