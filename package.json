@@ -5,7 +5,8 @@
   "main": "app/bin/start.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "test": "mocha app/**/*.spec.js"
   },
   "repository": {
     "type": "git",
