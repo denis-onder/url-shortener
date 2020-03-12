@@ -14,5 +14,4 @@ module.exports = app => {
   app.use(json());
   app.use(router);
   app.use("/api", limiter);
-  app.set("view engine", "ejs");
 };
