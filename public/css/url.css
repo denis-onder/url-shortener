@@ -1,12 +1,45 @@
 .square_container {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .square {
   height: 36px;
   width: 36px;
   margin: 0 10px;
+  background-color: #fff;
+}
+
+#square0 {
+  margin-left: 0 !important;
+}
+
+#container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#container h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#url {
+  font-size: 32px;
+  font-weight: bold;
   background-color: #000;
-  display: none;
+  color: #fff;
+  max-width: 75%;
+  padding: 10px 10px;
 }
