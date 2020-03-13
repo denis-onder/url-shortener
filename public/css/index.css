@@ -84,6 +84,32 @@
   padding: 1em;
 }
 
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 75px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_text {
+  font-size: 28px;
+}
+
+.footer_text_link {
+  color: #fff;
+  text-decoration-color: transparent;
+  transition: all ease-in-out 0.1s;
+}
+
+.footer_text_link:hover {
+  text-decoration-color: #fff;
+}
+
 .revealed {
   background-color: #000 !important;
   cursor: pointer !important;
