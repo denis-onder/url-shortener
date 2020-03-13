@@ -6,5 +6,82 @@
   bottom: 0;
   margin: auto;
   width: 50%;
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+#hero_input,
+#hero_btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 1em 0;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+#hero_input {
+  width: 75%;
+  margin-right: 5px;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+
+#hero_input::placeholder {
+  transition: color ease-in-out 0.1s;
+  color: #000;
+  font-weight: bold;
+}
+
+#hero_input:focus::placeholder {
+  color: transparent;
+}
+
+#hero_btn {
+  width: 25%;
+  margin-left: 5px;
+  border: 2px solid #000;
+  font-weight: bold;
+}
+
+#hero_btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#hero_output {
+  background-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  caret-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 22px;
+  cursor: default;
+  transition: all ease-in-out 0.1s;
+}
+
+#hero_output p {
+  font-size: 18px;
+  padding: 1em;
+}
+
+.revealed {
+  background-color: #000 !important;
+  cursor: pointer !important;
+}
+
+.revealed:hover {
+  background-color: #222;
 }

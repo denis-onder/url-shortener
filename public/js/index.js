@@ -1,7 +1,8 @@
 const $ = id => document.getElementById(id);
+const output = $("hero_output");
+const input = $("hero_input");
 
 async function handler() {
-  const input = $("hero_input");
   const res = await fetch("/api/shorten", {
     method: "POST",
     headers: {
@@ -13,8 +14,23 @@ async function handler() {
   if (error) {
     console.error(error);
   } else {
-    console.log(id);
+    input.value = "";
+    output.classList.add("revealed");
+    output.value = `${window.location}${id}`;
+    output.addEventListener("click", copy);
   }
+}
+
+function copy() {
+  output.select();
+  output.setAttribute("disabled", "");
+  document.execCommand("copy");
+  alert("Copied the text: " + output.value);
+  window.getSelection().empty();
+  setTimeout(() => {
+    output.classList.remove("revealed");
+    output.removeAttribute("disabled");
+  }, 2500);
 }
 
 $("hero_btn").addEventListener("click", handler);
