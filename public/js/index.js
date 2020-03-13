@@ -42,3 +42,6 @@ function copy() {
 }
 
 $("hero_btn").addEventListener("click", handler);
+$("hero_input").addEventListener("keydown", e =>
+  e.keyCode === 13 ? handler() : null
+);
