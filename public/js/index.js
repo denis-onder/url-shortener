@@ -13,7 +13,7 @@ async function handler() {
   const { error, id } = await res.json();
   if (error) {
     output.classList.add("error");
-    output.value = error;
+    output.value = error.toLowerCase();
     output.setAttribute("disabled", "");
     setTimeout(() => {
       output.classList.remove("error");

@@ -11,11 +11,16 @@
   justify-content: center;
 }
 
+#hero h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
 #hero_form {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #hero_input,
@@ -26,6 +31,7 @@
   padding: 1em 0;
   cursor: pointer;
   transition: all ease-in-out 0.1s;
+  font-size: 18px;
 }
 
 #hero_input {
@@ -70,6 +76,7 @@
   font-size: 22px;
   cursor: default;
   transition: all ease-in-out 0.1s;
+  border: 2px solid transparent;
 }
 
 #hero_output p {
@@ -83,7 +90,9 @@
 }
 
 .revealed:hover {
-  background-color: #222;
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
 }
 
 .error {
