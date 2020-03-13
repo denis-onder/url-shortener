@@ -12,7 +12,14 @@ async function handler() {
   });
   const { error, id } = await res.json();
   if (error) {
-    console.error(error);
+    output.classList.add("error");
+    output.value = error;
+    output.setAttribute("disabled", "");
+    setTimeout(() => {
+      output.classList.remove("error");
+      output.removeAttribute("disabled");
+      output.value = "";
+    }, 2500);
   } else {
     input.value = "";
     output.classList.add("revealed");
@@ -25,11 +32,12 @@ function copy() {
   output.select();
   output.setAttribute("disabled", "");
   document.execCommand("copy");
-  alert("Copied the text: " + output.value);
+  output.value = "Copied to clipboard!";
   window.getSelection().empty();
   setTimeout(() => {
     output.classList.remove("revealed");
     output.removeAttribute("disabled");
+    output.value = "";
   }, 2500);
 }
 

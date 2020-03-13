@@ -85,3 +85,7 @@
 .revealed:hover {
   background-color: #222;
 }
+
+.error {
+  background-color: red !important;
+}
