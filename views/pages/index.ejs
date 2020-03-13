@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>urli.xyz</title>
   </head>
@@ -14,31 +15,8 @@
         <input id="hero_input" type="text" placeholder="URL:" />
         <button id="hero_btn">Shorten!</button>
       </div>
+      <code id="hero_output"></code>
     </div>
   </body>
-  <script>
-    const $ = id => document.getElementById(id);
-
-    async function handler() {
-      const input = $("hero_input");
-
-      const res = await fetch("/api/shorten", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ url: input.value })
-      });
-
-      const { error, id } = await res.json();
-
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(id);
-      }
-    }
-
-    $("hero_btn").addEventListener("click", handler);
-  </script>
+  <script src="js/index.js"></script>
 </html>
