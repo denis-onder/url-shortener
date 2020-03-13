@@ -26,9 +26,7 @@ describe("Controller", () => {
   describe("Get URL", () => {
     it("should return the URL via the shortened URL / ID", () => {
       const originalURL = controller.getFullURL(shortenedURL, TEST_CACHE);
-      expect(originalURL)
-        .to.be.a("string")
-        .and.to.include("http");
+      expect(originalURL).to.equal(TEST_URL);
     });
   });
 });

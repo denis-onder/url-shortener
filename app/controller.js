@@ -4,7 +4,7 @@ const cache = require("./cache");
 // The parameters in the class methods are named store, allowing for dependency injection.
 class Controller {
   constructor() {
-    this._regex = /\b(https?|ftp|file):\/\/[\-A-Za-z0-9+&@#\/%?=~_|!:,.;]*[\-A-Za-z0-9+&@#\/%=~_|]/;
+    this._regex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
   }
   shortenURL(url, store = cache) {
     if (!this._regex.test(url)) return false;
