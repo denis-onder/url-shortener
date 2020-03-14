@@ -72,16 +72,12 @@
   outline: none;
   border: none;
   padding: 1em 0;
-  text-align: center;
   font-size: 22px;
   cursor: default;
   transition: all ease-in-out 0.1s;
   border: 2px solid transparent;
-}
-
-#hero_output p {
-  font-size: 18px;
-  padding: 1em;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 #footer {
@@ -103,7 +99,7 @@
 .footer_text_link {
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   transition: all ease-in-out 0.1s;
 }
 
@@ -143,6 +139,10 @@
   #hero_btn,
   #hero_input {
     font-size: 16px;
+  }
+  #hero_output {
+    padding: 0.5em 0;
+    font-size: 20px;
   }
 }
 
