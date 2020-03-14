@@ -23,7 +23,6 @@
   "homepage": "https://github.com/denis-onder/url-shortener#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-rate-limit": "^5.1.1",

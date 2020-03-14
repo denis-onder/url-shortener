@@ -9,6 +9,5 @@ It's using [node-cache](https://www.npmjs.com/package/node-cache) to keep the sh
 
 ### Setup:
 
-1. Create a `.env` file in the root directory of the project, based off of the `example.env` file.
-2. Run `npm install`.
-3. Run `npm start` or `npm run dev`, depending if you want Nodemon to run the application or not.
+1. Run `npm install`.
+2. Run `npm start` or `npm run dev`, depending if you want Nodemon to run the application or not.
