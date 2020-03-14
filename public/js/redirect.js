@@ -15,7 +15,7 @@ const loop = async () => {
         if (i === squares.length - 1)
           setTimeout(() => {
             window.location.href = checkURL(
-              document.getElementById("url").innerText
+              document.getElementById("url").value
             );
           }, 1000);
       }, i * 1000))(i);

@@ -17,7 +17,7 @@ class Controller {
   }
   getFullURL(id, store = cache) {
     const url = store.get(id);
-    if (url === "undefined") return false;
+    if (url === undefined) return false;
     return url;
   }
 }
