@@ -87,7 +87,7 @@
 #footer {
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100vw !important;
   height: 60px;
   background-color: #000;
   color: #fff;
@@ -102,12 +102,13 @@
 
 .footer_text_link {
   color: #fff;
-  text-decoration-color: transparent;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
   transition: all ease-in-out 0.1s;
 }
 
 .footer_text_link:hover {
-  text-decoration-color: #fff;
+  border-color: rgb(0, 132, 255);
 }
 
 .revealed {
@@ -123,4 +124,40 @@
 
 .error {
   background-color: red !important;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    width: 95%;
+  }
+}
+
+@media (max-width: 468px) {
+  #hero h1,
+  #hero_form {
+    margin-bottom: 25px;
+  }
+  #hero h1 {
+    font-size: 32px;
+  }
+  #hero_btn,
+  #hero_input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 368px) {
+  #hero h1 {
+    font-size: 26px;
+  }
+  #hero_btn,
+  #hero_input {
+    font-size: 14px;
+  }
+  #footer {
+    height: 50px;
+  }
+  .footer_text {
+    font-size: 18px;
+  }
 }
