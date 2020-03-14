@@ -14,9 +14,9 @@ const loop = async () => {
         square.style.backgroundColor = "#000";
         if (i === squares.length - 1)
           setTimeout(() => {
-            window.location.href = checkURL(
-              document.getElementById("url").innerText
-            );
+            // window.location.href = checkURL(
+            //   document.getElementById("url").innerText
+            // );
           }, 1000);
       }, i * 1000))(i);
   });
