@@ -4,7 +4,7 @@ const controller = require("./controller");
 router.get("/", (_, res) => res.render("pages/index"));
 router.get("/:id", (req, res) => {
   const url = controller.getFullURL(req.params.id);
-  res.render("pages/url", { url });
+  res.render("pages/redirect", { url });
 });
 router.post("/api/shorten", (req, res) => {
   const shortenedURL = controller.shortenURL(req.body.url);
