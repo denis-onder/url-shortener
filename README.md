@@ -4,7 +4,7 @@
 
 ### About:
 
-[urli.xyz](https://urli.xyz/) is a free, open source, no questions asked URL shortener.
+[urli.xyz](http://urli.xyz/) is a free, open source, no questions asked URL shortener.
 It's using [node-cache](https://www.npmjs.com/package/node-cache) to keep the shortened URLs in memory, making this piece of software blazing fast at what it's supposed to do.
 
 ### Setup:
