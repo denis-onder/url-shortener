@@ -29,16 +29,16 @@ class Server {
     }
   }
   start() {
-    if (process.env.NODE_ENV === "development") {
-      this.app.listen(port, this._serverStartHandler);
-    } else {
-      const key = readFileSync(__dirname + "/../domain.key"),
-        cert = readFileSync(__dirname + "/../domain.crt");
+    // if (process.env.NODE_ENV === "development") {
+    this.app.listen(port, this._serverStartHandler);
+    // } else {
+    //   const key = readFileSync(__dirname + "/../domain.key"),
+    //     cert = readFileSync(__dirname + "/../domain.crt");
 
-      https
-        .createServer({ key, cert }, this.app)
-        .listen(port, this._serverStartHandler);
-    }
+    //   https
+    //     .createServer({ key, cert }, this.app)
+    //     .listen(port, this._serverStartHandler);
+    // }
   }
 }
 
