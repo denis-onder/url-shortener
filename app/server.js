@@ -2,6 +2,8 @@ const express = require("express");
 const middleware = require("./middleware");
 const { join } = require("path");
 const { port, env } = require("./config");
+const { readFileSync } = require("fs");
+const https = require("https");
 
 class Server {
   constructor() {
@@ -20,12 +22,23 @@ class Server {
       process.exit(1);
     } else {
       console.log(
-        `Server running!\nhttp://localhost:${port}/\nEnvironment: ${env}`
+        `Server running!\n${
+          process.env.NODE_ENV === "development" ? "http" : "https"
+        }://localhost:${port}/\nEnvironment: ${env}`
       );
     }
   }
   start() {
-    this.app.listen(port, this._serverStartHandler);
+    if (process.env.NODE_ENV === "development") {
+      this.app.listen(port, this._serverStartHandler);
+    } else {
+      const key = readFileSync(__dirname + "/../domain.key"),
+        cert = readFileSync(__dirname + "/../domain.crt");
+
+      https
+        .createServer({ key, cert }, this.app)
+        .listen(port, this._serverStartHandler);
+    }
   }
 }
 
